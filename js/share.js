@@ -1,4 +1,4 @@
-const url = 'https://twelve-zodiac-love-type.netlify.app/';
+const url = 'https://loving-hoover-3db6e9.netlify.app/';
 
 function setShare(){
     var resultImg = document.querySelector('#resultImg');
