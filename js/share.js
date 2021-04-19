@@ -1,32 +1,31 @@
-function kakaoShare(){
+const url = 'https://twelve-zodiac-love-type.netlify.app/';
+
+function setShare(){
+    var resultImg = document.querySelector('#resultImg');
+    var resultAlt = resultImg.firstElementChild.alt;
+    const shareTitle = '십이간지 연애유형 결과';
+    const shareDesc = infoList[resultAlt].name;
+    const shareImage = url+'img/image-'+resultAlt+'.png';
+    const shareURL = url+'resultPage/result-'+resultAlt+'.html';
+
     Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
-        title: '디저트 사진',
-        description: '아메리카노, 빵, 케익',
+        title: shareTitle,
+        description: shareDesc,
         imageUrl:
-            'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+        shareImage,
         link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            androidExecParams: 'test',
+            mobileWebUrl: shareURL,
+            webUrl:shareURL,
         },
-        },
-        social: {
-        likeCount: 10,
-        commentCount: 20,
-        sharedCount: 30,
         },
         buttons: [
         {
-            title: '웹으로 이동',
+            title: '결과 확인하기',
             link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            },
-        },
-        {
-            title: '앱으로 이동',
-            link: {
-            mobileWebUrl: 'https://developers.kakao.com',
+            mobileWebUrl: shareURL,
+            webUrl:shareURL
             },
         },
         ]
