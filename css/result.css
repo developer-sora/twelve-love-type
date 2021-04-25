@@ -1,20 +1,26 @@
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #result{
     display:none;
-    background-color: aliceblue;
     width:80%;
     text-align: center;
     border-radius: 20px;
 }
 
 #shareResult{
-    background-color: aliceblue;
     width:80%;
     text-align: center;
     border-radius: 20px;
 }
 
 .resultDesc{
-    font-size:20px;
+    font-size:14px;
+    font-family: 'GongGothicLight';
 }
 
 .resultName{
